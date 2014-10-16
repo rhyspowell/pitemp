@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+  <ul class=entries>
+  {% for row in data %}
+    <li><h2>{{ row.time }}</h2><br>
+    &deg;C {{ row.degc }}<br>
+    &deg;F {{ row.degf }}
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
